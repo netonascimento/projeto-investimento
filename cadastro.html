@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Gestão Patrimonial</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Gestor de Patrimônio</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Cadastrar Ativos <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Visualisar Ativos</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+          </form>
+        </div>
+      </nav>
+
+
+    <div class="container-fluid">
+
+            <form method="post" action="dados.php">
+                
+                    <div class="form-group">
+                            <label for="inputTipo">Tipo</label>
+                            <select id="inputTipo" class="form-control" name="inputTipo">
+                              <option selected>Escolher...</option>
+                              <option value="imovel">Imóvel</option>
+                            </select>
+                          </div>
+   
+                      <div class="form-group">
+                        <label for="inputDescricao">Descricao</label>
+                        <input type="text" class="form-control" id="inputDescricao" name="inputDescricao"  placeholder="Descrição do bem">
+                      </div>
+                      <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputValorAnterior">Valor Anterior</label>
+                        <input type="text" class="form-control" id="inputValorAnterior" name="inputValorAnterior">
+                      </div>
+                      <div class="form-group col-md-6">
+                            <label for="inputValorAtual">Valor Atual</label>
+                            <input type="text" class="form-control" id="inputValorAtual" name="inputValorAtual">
+                          </div>
+                    </div>
+                    <div class="form-row">
+                    <div class="form-group col-md-10">
+                      <label for="inputLogradouro">Logradouro</label>
+                      <input type="text" class="form-control" id="inputLogradouro" name="inputLogradouro" placeholder="Av. São João">
+                    </div>
+                    <div class="form-group col-md-2">
+                            <label for="inputNumero">Numero</label>
+                            <input type="text" class="form-control" id="inputNumero" name="inputNumero" placeholder="11">
+                          </div>
+                        </div>
+                        <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="inputComplemento">Complemento</label>
+                      <input type="text" class="form-control" id="inputComplemento" name="inputComplemento" placeholder="Apartmento, studio, or floor">
+                    </div>
+                    <div class="form-group col-md-6">
+                            <label for="inputBairro">Bairro</label>
+                            <input type="text" class="form-control" id="inputBairro" name="inputBairro" placeholder="">
+                          </div>
+                </div>
+                                               
+                      <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="inputCidade">Cidade</label>
+                        <input type="text" class="form-control" id="inputCidade" name="inputCidade">
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label for="inputEstado">Estado</label>
+                        <select id="inputEstado" class="form-control" name="InputEstado">
+                          <option selected>Choose...</option>
+                          <option value="AC">AC</option>
+                          <option value="AL">AL</option>
+                          <option value="AP">AP</option>
+                          <option value="AM">AM</option>
+                          <option value="BA">BA</option>
+                          <option value="CE">CE</option>
+                          <option value="DF">DF</option>
+                          <option value="ES">ES</option>
+                          <option value="GO">GO</option>
+                          <option value="MA">MA</option>
+                          <option value="MT">MT</option>
+                          <option value="MS">MS</option>
+                          <option value="MG">MG</option>
+                          <option value="PA">PA</option>
+                          <option value="PB">PB</option>
+                          <option value="PR">PR</option>
+                          <option value="PE">PE</option>
+                          <option value="PI">PI</option>
+                          <option value="RJ">RJ</option>
+                          <option value="RN">RN</option>
+                          <option value="RS">RS</option>
+                          <option value="RO">RO</option>
+                          <option value="RR">RR</option>
+                          <option value="SC">SC</option>
+                          <option value="SP">SP</option>
+                          <option value="SE">SE</option>
+                          <option value="TO">TO</option>
+  
+                        </select>
+                      </div>
+                      <div class="form-group col-md-2">
+                        <label for="inputCEP">CEP</label>
+                        <input type="text" class="form-control" id="inputCEP" name="inputCEP">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <label for="inputBanco">Banco</label>
+                                <select id="inputBanco" class="form-control" name="inputBanco">
+                                        <option selected>Escolher...</option>
+                                        <option value="001">001 – Banco do Brasil S.A.</option>
+                                        <option value="341">341 – Banco Itaú S.A.</option>
+                                        <option value="033">033 – Banco Santander (Brasil) S.A.</option>
+                                        <option value="356">356 – Banco Real S.A. (antigo)</option>
+                                        <option value="652">652 – Itaú Unibanco Holding S.A.</option>
+                                        <option value="237">237 – Banco Bradesco S.A.</option>
+                                        <option value="745">745 – Banco Citibank S.A.</option>
+                                        <option value="399">399 – HSBC Bank Brasil S.A. – Banco Múltiplo.</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputAgencia">Agência</label>
+                                <input type="text" class="form-control" id="inputAgencia" name="inputAgencia">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputConta">Conta</label>
+                                <input type="text" class="form-control" id="inputConta" name="inputConta">
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="inputTipoConta">Tipo de Conta</label>
+                                <select id="inputTipoConta" class="form-control" name="inputTipoConta">
+                                        <option selected>Escolher...</option>
+                                        <option value="Conta Corrente">Conta Corrente</option>
+                                        <option value="Poupança">Poupança</option>
+                                        <option value="Conta Investimento">Conta Investimento</option>
+                                        <option value="Outros">Outros</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="inputCpfCnpj">CPF/CNPJ</label>
+                            <input type="text" class="form-control" id="inputCpfCnpj" name="inputCpfCnpj">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputRenavan">Renavan</label>
+                            <input type="text" class="form-control" id="inputRenavan" name="inputRenavan">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputIncricaoMunicipal">Inscrição Municipal</label>
+                            <input type="text" class="form-control" id="inputInscricaoMunicipal" name="inputInscricaoMunicipal">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputAreaTotal">AreaTotal</label>
+                            <input type="text" class="form-control" id="inputAreaTotal" name="inputAreaTotal">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="inputDataAquisicao">Data de Aquisição</label>
+                                <input type="text" class="form-control" id="inputDataAquisicao" name="inputDataAquisicao">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="inputMatricula">Matrícula</label>
+                                <input type="text" class="form-control" id="inputMatricula" name="inputMatricula">
+                                <div class="form-group col-md-4">
+                                  <label for="inputMatricula">Data da Venda</label>
+                                  <input type="text" class="form-control" id="inputDataVenda" name="inputDataVenda">
+
+                            </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="inputAreaTotal">Observação</label>
+                            <input type="text" class="form-control" id="inputObservacao" name="inputObservacao">
+                            </div>
+
+
+                    <div class="form-row">
+                    <div class="form-group col-md-4">
+                    <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile1" name="customFile1">
+                            <label class="custom-file-label" for="customFile">Choose file</label>
+                          </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                            <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFile2" name="customFile2">
+                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                  </div>
+                            </div>
+                            <div class="form-group col-md-4">
+                                    <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="customFile3" name="customFile3">
+                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                          </div>
+                                    </div>
+                </div>
+
+
+
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                          Check me out
+                        </label>
+                      </div>
+                    </div>
+                <br>
+                <div class="form-group">
+                    <div>
+                    <button type="submit" class="btn btn-primary" value="Gravar">Gravar</button>
+                    </div>
+            </div>
+                  </form>
+  
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
